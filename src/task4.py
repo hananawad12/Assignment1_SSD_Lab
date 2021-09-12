@@ -13,7 +13,7 @@ def decorator_4(fun):
         start=time.perf_counter()
         with contextlib.redirect_stderr(io.StringIO()) as file:
             #f(*args)
-            ff(*args)  #the name of function is wrong so it will send the error to log file
+            ff(*args)  #name_fun is wrong so the program will send the error to the log file(log.txt) with a timestamp.
         end=time.perf_counter()
         s=file.getvalue()
         print(f"{fun.__name__} call {wrapper.count} executed in {end-start} sec")
